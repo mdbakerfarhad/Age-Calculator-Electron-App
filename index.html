@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgeCalcPro</title>
+    <link rel="icon" type="image/x-icon" href="agec.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  </head>
+  <body>
+     <!-- Navigation Bar -->
+     <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="agec.png" alt="AgeCalcPro Logo" class="logo-img" />
+          <span>AgeCalcPro</span>
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+              </label>
+              <span class="theme-icon"><i class="fas fa-moon"></i></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <h1><i class="fas fa-calculator"></i> Age Calculator</h1>
+        <p class="subtitle">
+          Select two dates to calculate the age difference with full details!
+        </p>
+
+        <div class="input-group">
+          <label for="dob"
+            ><i class="far fa-calendar-alt"></i> Date of Birth</label
+          >
+          <input type="date" id="dob" />
+        </div>
+
+        <div class="input-group">
+          <label for="targetDate"
+            ><i class="fas fa-calendar-alt"></i> Age at the Date of</label
+          >
+          <input type="date" id="targetDate" />
+        </div>
+
+        <div class="button-group">
+          <button onclick="calculateAge()" class="calculate-btn">
+            <i class="fas fa-calculator"></i> Calculate
+          </button>
+          <button onclick="resetForm()" class="refresh-btn">
+            <i class="fas fa-sync-alt"></i> Refresh
+          </button>
+        </div>
+
+        <div id="result"></div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About AgeCalcPro</h3>
+          <p>
+            The most precise age calculator that shows your age in years,
+            months, days, and even seconds!
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 <a href="">Md. Baker</a>. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="renderer.js"></script>
+  </body>
+</html>
